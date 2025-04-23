@@ -6,6 +6,7 @@ import ThemeWrapper from "@/components/ThemeWrapper";
 import "./globals.css";
 import { MDXProvider } from '@/components/MDXProvider';
 import { Analytics } from '@vercel/analytics/react';
+import { Suspense } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,12 +33,14 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <ThemeWrapper>
           <MDXProvider>
+            <Suspense>
             <ClientAnalytics>
               <Navigation />
               <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                 {children}
               </div>
             </ClientAnalytics>
+            </Suspense>
             <Analytics />
           </MDXProvider>
         </ThemeWrapper>
