@@ -1,5 +1,10 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Technologies
+
+- Next.js - [Documentation](https://nextjs.org/docs)
+- Tailwind CSS v4.1.4 - [Documentation](https://tailwindcss.com/)
+
 ## Getting Started
 
 First, run the development server:
