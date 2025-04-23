@@ -29,6 +29,7 @@ COPY --from=builder /app/.next/static ./.next/static
 
 # Expose the port the app runs on
 EXPOSE 3000
+ENV HOSTNAME="0.0.0.0"
 
 # Start the application
 CMD ["node", "server.js"]
